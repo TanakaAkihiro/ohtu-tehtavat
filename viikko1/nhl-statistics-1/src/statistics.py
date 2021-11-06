@@ -1,6 +1,3 @@
-
-
-
 def sort_by_points(player):
     return player.points
 
