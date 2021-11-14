@@ -1,10 +1,9 @@
 from tuote import Tuote
-from kirjanpito import Kirjanpito
 
 
 class Varasto:
-    def __init__(self):
-        self._kirjanpito = Kirjanpito.get_instance()
+    def __init__(self, kirjanpito):
+        self._kirjanpito = kirjanpito
         self._saldot = {}
         self._alusta_tuotteet()
 
