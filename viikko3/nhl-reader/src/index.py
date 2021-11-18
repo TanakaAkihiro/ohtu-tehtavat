@@ -23,6 +23,8 @@ def main():
 
     print("Oliot:")
 
+    players.sort(key=lambda x: x.goals+x.assists, reverse=True)
+
     for player in players:
         print(player)
 
