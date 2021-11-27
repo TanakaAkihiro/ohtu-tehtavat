@@ -1,3 +1,4 @@
+from unittest import result
 from tuote import Tuote
 from ostos import Ostos
 
@@ -10,17 +11,24 @@ class Ostoskori:
         if self.ostokset == []:
             return 0
 
-        result = 0
+        summa = 0
         for ostos in self.ostokset:
-            result += ostos.lukumaara()
+            summa += ostos.lukumaara()
         
-        return result
+        return summa
         # kertoo korissa olevien tavaroiden lukumäärän
         # eli jos koriin lisätty 2 kpl tuotetta "maito", tulee metodin palauttaa 2 
         # samoin jos korissa on 1 kpl tuotetta "maito" ja 1 kpl tuotetta "juusto", tulee metodin palauttaa 2 
 
     def hinta(self):
-        return 0
+        if self.ostokset == []:
+            return 0
+        
+        summa = 0
+        for ostos in self.ostokset:
+            summa += ostos.hinta()
+        
+        return summa
         # kertoo korissa olevien ostosten yhteenlasketun hinnan
 
     def lisaa_tuote(self, lisattava: Tuote):
