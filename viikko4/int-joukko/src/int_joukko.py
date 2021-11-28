@@ -16,11 +16,6 @@ class IntJoukko:
         return False
 
     def lisaa(self, luku):
-        if self.alkioiden_lkm == 0:
-            self.lukujono[0] = luku
-            self.alkioiden_lkm = self.alkioiden_lkm + 1
-            return True
-
         if not self.kuuluu(luku):
             self.lukujono[self.alkioiden_lkm] = luku
             self.alkioiden_lkm = self.alkioiden_lkm + 1
