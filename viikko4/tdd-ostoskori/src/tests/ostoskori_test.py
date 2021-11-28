@@ -91,3 +91,14 @@ class TestOstoskori(unittest.TestCase):
         ostoksien_maara = len(self.kori.ostokset())
 
         self.assertEqual(ostoksien_maara, 1)
+    
+    def test_kahden_saman_tuotteen_lisaamisen_jalkeen_ostoskori_sisaltaa_ostoksen_jolla_sama_nimi_kuin_tuotteella_ja_lukumaara_kaksi(self):
+        maito = Tuote("Maito", 3)
+
+        self.kori.lisaa_tuote(maito)
+        self.kori.lisaa_tuote(maito)
+
+        nimi = self.kori.ostokset()[0].tuotteen_nimi()
+        lukumaara = self.kori.ostokset()[0].lukumaara()
+        self.assertEqual(nimi, "Maito")
+        self.assertEqual(lukumaara, 2)
