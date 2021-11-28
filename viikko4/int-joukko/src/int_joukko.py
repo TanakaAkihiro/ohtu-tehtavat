@@ -29,25 +29,11 @@ class IntJoukko:
 
         return False
 
-    def poista(self, n):
-        kohta = -1
-        apu = 0
-
-        for i in range(0, self.alkioiden_lkm):
-            if n == self.lukujono[i]:
-                kohta = i  # siis luku löytyy tuosta kohdasta :D
-                self.lukujono[kohta] = 0
-                break
-
-        if kohta != -1:
-            for j in range(kohta, self.alkioiden_lkm - 1):
-                apu = self.lukujono[j]
-                self.lukujono[j] = self.lukujono[j + 1]
-                self.lukujono[j + 1] = apu
-
-            self.alkioiden_lkm = self.alkioiden_lkm - 1
+    def poista(self, luku):
+        if luku in self.lukujono:
+            self.lukujono.remove(luku)
+            self.alkioiden_lkm -= 1
             return True
-
         return False
 
     def mahtavuus(self):
