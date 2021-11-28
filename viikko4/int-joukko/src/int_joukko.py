@@ -39,7 +39,7 @@ class IntJoukko:
     def mahtavuus(self):
         return self.alkioiden_lkm
 
-    def to_int_list(self):
+    def muunna_lukulistaksi(self):
         taulu = [0] * self.alkioiden_lkm
 
         for i in range(0, len(taulu)):
@@ -50,8 +50,8 @@ class IntJoukko:
     @staticmethod
     def yhdiste(a, b):
         x = IntJoukko()
-        a_taulu = a.to_int_list()
-        b_taulu = b.to_int_list()
+        a_taulu = a.muunna_lukulistaksi()
+        b_taulu = b.muunna_lukulistaksi()
 
         for i in range(0, len(a_taulu)):
             x.lisaa(a_taulu[i])
@@ -64,8 +64,8 @@ class IntJoukko:
     @staticmethod
     def leikkaus(a, b):
         y = IntJoukko()
-        a_taulu = a.to_int_list()
-        b_taulu = b.to_int_list()
+        a_taulu = a.muunna_lukulistaksi()
+        b_taulu = b.muunna_lukulistaksi()
 
         for i in range(0, len(a_taulu)):
             for j in range(0, len(b_taulu)):
@@ -77,8 +77,8 @@ class IntJoukko:
     @staticmethod
     def erotus(a, b):
         z = IntJoukko()
-        a_taulu = a.to_int_list()
-        b_taulu = b.to_int_list()
+        a_taulu = a.muunna_lukulistaksi()
+        b_taulu = b.muunna_lukulistaksi()
 
         for i in range(0, len(a_taulu)):
             z.lisaa(a_taulu[i])
