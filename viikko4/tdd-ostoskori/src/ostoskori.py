@@ -35,9 +35,10 @@ class Ostoskori:
         # lisää tuotteen
         boolean = False
         for ostos in self.ostoslista:
-            if ostos.tuotteen_nimi == lisattava.nimi:
+            if ostos.tuotteen_nimi() == lisattava.nimi():
                 ostos.muuta_lukumaaraa(1)
                 boolean = True
+
         if not boolean:
             self.ostoslista.append(Ostos(lisattava))
         
