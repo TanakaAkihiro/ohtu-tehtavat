@@ -6,7 +6,7 @@ class IntJoukko:
             self.kapasiteetti = kapasiteetti
             self.kasvatuskoko = kasvatuskoko
 
-        self.ljono = [0] * self.kapasiteetti
+        self.lukujono = [0] * self.kapasiteetti
 
         self.alkioiden_lkm = 0
 
