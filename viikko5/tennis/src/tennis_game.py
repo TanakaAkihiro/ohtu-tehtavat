@@ -4,12 +4,12 @@ class TennisGame:
         self.player2_name = player2_name
         self.m_score1 = 0
         self.m_score2 = 0
-        self.tie_game = [
-            "Love-All",
-            "Fifteen-All",
-            "Thirty-All",
-            "Forty-All"
-        ]
+        self.tie_game = {
+            "0": "Love-All",
+            "1": "Fifteen-All",
+            "2": "Thirty-All",
+            "3": "Forty-All"
+        }
 
     def won_point(self, player_name):
         if player_name == "player1":
@@ -55,7 +55,7 @@ class TennisGame:
         return score
     
     def tie_situation(self):
-        if self.m_score1 > 3:
+        if str(self.m_score1) not in self.tie_game:
             return "Deuce"
-        return self.tie_game[self.m_score1]
+        return self.tie_game[str(self.m_score1)]
     
