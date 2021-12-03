@@ -19,22 +19,22 @@ class Summa:
         self.sovellus.plus(arvo)
 
 class Erotus:
-    def __init__(self, sovellus) -> None:
+    def __init__(self, sovellus):
         self.sovellus = sovellus
     
     def suorita(self, arvo):
         self.sovellus.miinus(arvo)
 
 class Nollaus:
-    def __init__(self, sovellus) -> None:
+    def __init__(self, sovellus):
         self.sovellus = sovellus
     
     def suorita(self, arvo):
         self.sovellus.nollaa()
-    
+
 class Kumoa:
-    def __init__(self, sovellus) -> None:
+    def __init__(self, sovellus):
         self.sovellus = sovellus
     
     def suorita(self, arvo):
-        pass
+        self.sovellus.kumoa()
