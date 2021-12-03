@@ -26,15 +26,8 @@ class TennisGame:
 
         elif self.m_score1 >= 4 or self.m_score2 >= 4:
             minus_result = self.m_score1 - self. m_score2
+            score = self.after_four_points(minus_result)
 
-            if minus_result == 1:
-                score = "Advantage player1"
-            elif minus_result == -1:
-                score = "Advantage player2"
-            elif minus_result >= 2:
-                score = "Win for player1"
-            else:
-                score = "Win for player2"
         else:
             for i in range(1, 3):
                 if i == 1:
@@ -59,3 +52,12 @@ class TennisGame:
             return "Deuce"
         return self.tie_game[str(self.m_score1)]
     
+    def after_four_points(self, minus_result):
+        if minus_result == 1:
+            return "Advantage player1"
+        elif minus_result == -1:
+            return "Advantage player2"
+        elif minus_result >= 2:
+            return "Win for player1"
+        else:
+            return "Win for player2"
