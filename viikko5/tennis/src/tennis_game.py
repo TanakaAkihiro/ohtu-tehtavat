@@ -8,7 +8,7 @@ class TennisGame:
             "Love-All",
             "Fifteen-All",
             "Thirty-All",
-            
+            "Forty-All"
         ]
 
     def won_point(self, player_name):
@@ -22,10 +22,8 @@ class TennisGame:
         temp_score = 0
 
         if self.m_score1 == self.m_score2:
-            if self.m_score1 > 3:
-                score = "Deuce"
-            else:
-                score = self.tie_game[self.m_score1]
+            score = self.tie_situation()
+
         elif self.m_score1 >= 4 or self.m_score2 >= 4:
             minus_result = self.m_score1 - self. m_score2
 
@@ -55,3 +53,9 @@ class TennisGame:
                     score = score + "Forty"
 
         return score
+    
+    def tie_situation(self):
+        if self.m_score1 > 3:
+            return "Deuce"
+        return self.tie_game[self.m_score1]
+    
