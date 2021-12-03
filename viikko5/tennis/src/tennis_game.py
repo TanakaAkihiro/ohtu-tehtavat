@@ -4,11 +4,11 @@ class TennisGame:
         self.player2_name = player2_name
         self.m_score1 = 0
         self.m_score2 = 0
-        self.tie_game = {
-            "0": "Love-All",
-            "1": "Fifteen-All",
-            "2": "Thirty-All",
-            "3": "Forty-All"
+        self.game_count = {
+            "0": "Love",
+            "1": "Fifteen",
+            "2": "Thirty",
+            "3": "Forty"
         }
 
     def won_point(self, player_name):
@@ -29,28 +29,14 @@ class TennisGame:
             score = self.win_or_advantage(minus_result) + " " + self.winning_player()
 
         else:
-            for i in range(1, 3):
-                if i == 1:
-                    temp_score = self.m_score1
-                else:
-                    score = score + "-"
-                    temp_score = self.m_score2
-
-                if temp_score == 0:
-                    score = score + "Love"
-                elif temp_score == 1:
-                    score = score + "Fifteen"
-                elif temp_score == 2:
-                    score = score + "Thirty"
-                elif temp_score == 3:
-                    score = score + "Forty"
+            score = self.other_situation()
 
         return score
     
     def tie_situation(self):
-        if str(self.m_score1) not in self.tie_game:
+        if str(self.m_score1) not in self.game_count:
             return "Deuce"
-        return self.tie_game[str(self.m_score1)]
+        return self.game_count[str(self.m_score1)] + "-All"
         
     def win_or_advantage(self, minus_result):
         if abs(minus_result) >= 2:
@@ -61,3 +47,6 @@ class TennisGame:
         if self.m_score1 > self.m_score2:
             return "player1"
         return "player2"
+    
+    def other_situation(self):
+        return self.game_count[str(self.m_score1)] + "-" + self.game_count[str(self.m_score2)]
