@@ -1,0 +1,7 @@
+# Viikko 5 Tehtävä 6. Retrospektiivitekniikat
+
+ Ketterän menetelmän yksi tärkeimmistä vaiheista on retrospektiivi. Retrospektiivi tarkoittaa kokousta, jossa annetaan palautetta menneestä sprintistä, jota hyödynnetään tulevia sprinttejä varten.
+
+ Retrospektiiveillä on olemassa erilaisia tekniikoita toteuttaa. Yksi niistä on “Start, Stop, Continue, More of, Less of Wheel”. Tässä tekniikassa piirretään paperille iso ympyrä, joka jaetaan viiteen osaan. Jokaiseen osaan kirjoitetaan otsikoksi Start, Stop, Continue, More of ja Less of. Kun alusta on valmis, tiimiltä kysytään “mitä voisi aloittaa, lopettaa, jatkaa, lisätä tai vähentää seuraavassa tai tulevissa sprinteissä”. Tämän jälkeen tiimi voi vapaasti kirjoittaa kommentteja kuluneen sprintin risuista ja ruusuista, jotka jaetaan omiin kategoreihin.
+
+ Toinen tekniikka on “Glad, Sad, Mad”, jossa tiimi listaa sprintin aikana koettuja ongelmia, muutoksia tai muuten vaan havaintoja, jotka jaetaan positiivisiin(Glad) ja negatiivisiin(Sad, Mad)  ja nämä järjestetään äänestyksen perusteella tärkeysjärjestykseen ja keskustellaan kaikista kohdista, kunnes aika tai aiheet loppuu. Sad:in ja Mad:in erona on se, että Mad:issä voidaan kommentoida asioita, jotka eivät suoraan vaikuta suoraan tiimiin, mutta jollain tavalla sprintiin.
