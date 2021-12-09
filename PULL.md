@@ -1,0 +1,1 @@
+Linkki viikon 6 tehtävän 6 ![pull requestiin](https://github.com/Chester-CH/ohtu-miniprojekti/pull/1)
