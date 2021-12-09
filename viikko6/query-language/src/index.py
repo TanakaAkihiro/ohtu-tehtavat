@@ -8,10 +8,12 @@ def main():
     stats = Statistics(reader)
 
     query = default_query_builder
-    matcher = query.build()
+
+    matcher = query.playsIn("NYR").build()
 
     for player in stats.matches(matcher):
         print(player)
+
 
 
 

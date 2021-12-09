@@ -6,5 +6,8 @@ class QueryBuilder:
     
     def build(self):
         return self._query
+    
+    def playsIn(self, team):
+        return QueryBuilder(PlaysIn(team))
 
 query_builder = QueryBuilder()
