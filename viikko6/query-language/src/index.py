@@ -9,13 +9,10 @@ def main():
 
     query = default_query_builder
 
-    matcher = query.playsIn("NYR").build()
+    matcher = query.playsIn("NYR").hasAtLeast(5, "goals").hasFewerThan(10, "goals").build()
 
     for player in stats.matches(matcher):
         print(player)
-
-
-
 
 if __name__ == "__main__":
     main()
