@@ -58,3 +58,5 @@ class Or:
             if matcher.matches(player):
                 return True
         return False
+    
+all = All()
