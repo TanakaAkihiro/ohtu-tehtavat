@@ -1,9 +1,11 @@
-from kps_pelaaja_vs_pelaaja import KPSPelaajaVsPelaaja
-from kps_tekoaly import KPSTekoaly
-from kps_parempi_tekoaly import KPSParempiTekoaly
+from konsoli_io import KonsoliIO
+from peli import Peli
 
 
 def main():
+    
+    io = KonsoliIO
+
     while True:
         print("Valitse pelataanko"
               "\n (a) Ihmistä vastaan"
@@ -14,26 +16,21 @@ def main():
 
         vastaus = input()
 
+        if vastaus in "abc":
+            print(
+                "Peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s"
+            )
+
         if vastaus.endswith("a"):
-            print(
-                "Peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s"
-            )
-
-            kaksinpeli = KPSPelaajaVsPelaaja()
+            kaksinpeli = Peli.luo_kaksinpeli(io)
             kaksinpeli.pelaa()
+
         elif vastaus.endswith("b"):
-            print(
-                "Peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s"
-            )
-
-            yksinpeli = KPSTekoaly()
+            yksinpeli = Peli.luo_tekoaly_peli(io)
             yksinpeli.pelaa()
-        elif vastaus.endswith("c"):
-            print(
-                "Peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s"
-            )
 
-            haastava_yksinpeli = KPSParempiTekoaly()
+        elif vastaus.endswith("c"):
+            haastava_yksinpeli = Peli.luo_parempi_tekoaly_peli(io)
             haastava_yksinpeli.pelaa()
         else:
             break
